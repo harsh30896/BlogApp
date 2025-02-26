@@ -2,6 +2,7 @@ package com.blogApp.controller;
 
 import com.blogApp.entity.BlogPost;
 import com.blogApp.service.BlogPostService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,4 +24,8 @@ public class BlogPostController {
         return blogPostService.getBlogPost(id);
     }
 
+    @PutMapping("find blog/{blogHeading}")
+    public ResponseEntity<?> deleteBlogPost(@RequestParam String blodHeading){
+        return blogPostService.deleteBlogPost(blodHeading);
+    }
 }

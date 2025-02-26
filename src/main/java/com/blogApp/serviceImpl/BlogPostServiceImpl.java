@@ -30,5 +30,4 @@ public class BlogPostServiceImpl implements BlogPostService {
         return blogPostDto.deleteBlogPost(blogHeading);
     }
 
-
 }
